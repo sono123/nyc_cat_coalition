@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :events
   resources :cats
+  resources :pictures, only: [:show, :new, :create, :edit, :destroy]
 
   get 'main/index' => 'main#index'
 
