@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'cats/index'
+
+  get 'cats/new'
+
+  get 'cats/show'
+
+  get 'cats/edit'
+
   get 'main/index' => 'main#index'
 
   root 'main#index'
