@@ -8,12 +8,13 @@ class CatsController < ApplicationController
 
   def show
   	@cat = Cat.find(params[:id])
-  	picture = Picture.where(params[:cat_id], @cat.id)
-  	@picture = picture.last
+  	if Picture.where(params[:cat_id], @cat.id).count > 0
+  		@pictures = Picture.where(params[:cat_id], @cat.id)
+  	end
 
-  	50.times { print "*"}
-  	puts @picture
-  	50.times { print "*"}
+  	100.times { print "*"}
+  	puts @pictures
+  	100.times { print "*"}
   end
 
   def edit
