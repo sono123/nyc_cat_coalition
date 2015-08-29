@@ -1,14 +1,18 @@
-<%= form_for(@cat) do |f| %>
+<%= form_for @cat, html: { multipart: true } do |f| %>
+
   <% if @cat.errors.any? %>
+
     <div id="error_explanation">
       <h2><%= pluralize(@cat.errors.count, "error") %> prohibited this todo_list from being saved:</h2>
-
       <ul>
-      <% @cat.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+
+        <% @cat.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+
       </ul>
     </div>
+
   <% end %>
 
     <%= f.label :name %>
@@ -19,5 +23,15 @@
     <%= f.text_area :description %>
     <br>
 
+    <%= f.label :pictures %>
+    <%= file_field_tag "images[]", type: :file, multiple: true %>
+
     <%= f.submit %>
+
 <% end %>
+
+
+
+
+
+

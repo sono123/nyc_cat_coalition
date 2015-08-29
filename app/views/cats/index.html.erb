@@ -1,2 +1,7 @@
 <h1>Cats#index</h1>
 <p>Find me in app/views/cats/index.html.erb</p>
+
+<% @cats.each do |cat| %>
+	<p><%= cat.name %></p>
+	<%= image_tag cat.pictures.image.url(:thumb) %>
+<% end %>

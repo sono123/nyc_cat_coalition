@@ -1,5 +1,9 @@
 class CatsController < ApplicationController
   def index
+  	@cats = Cat.all
+  	100.times { print "*"}
+  	p @cats
+  	100.times { print "*"}
   end
 
   def new
@@ -25,6 +29,13 @@ class CatsController < ApplicationController
 
     respond_to do |format|
       if @cat.save
+      	if params[:images]
+          # The magic is here ;)
+          params[:images].each { |image|
+            @cat.pictures.create(image: image)
+          }
+        end
+
         format.html { redirect_to @cat, notice: 'Cat was successfully created.' }
         format.json { render action: 'show', status: :created, location: @cat }
       else
