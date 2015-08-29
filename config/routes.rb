@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
+  
+  get 'main/index' => 'main#index'
+  get '/admin' => 'main#admin'
+
+  root 'main#index'
 
   resources :events
-  
+
   resources :cats do
     resources :pictures, only: [:show, :new, :create, :edit, :destroy]
   end
 
-  get 'main/index' => 'main#index'
-
-  root 'main#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
