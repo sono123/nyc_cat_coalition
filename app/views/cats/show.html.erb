@@ -1,2 +1,6 @@
 <h1>Cats#show</h1>
 <p>Find me in app/views/cats/show.html.erb</p>
+
+<h2><%= @cat.name %></h2>
+<%= image_tag @picture.image.url(:medium) %>
+<p><%= @cat.description %></p>
