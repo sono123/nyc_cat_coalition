@@ -3,5 +3,5 @@
 
 <% @cats.each do |cat| %>
 	<p><%= cat.name %></p>
-	<%= image_tag cat.pictures.image.url(:thumb) %>
+	<%= image_tag cat.pictures.first.image.url(:thumb) %>
 <% end %>

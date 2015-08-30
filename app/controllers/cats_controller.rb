@@ -1,9 +1,6 @@
 class CatsController < ApplicationController
   def index
   	@cats = Cat.all
-  	100.times { print "*"}
-  	p @cats
-  	100.times { print "*"}
   end
 
   def new
@@ -12,13 +9,9 @@ class CatsController < ApplicationController
 
   def show
   	@cat = Cat.find(params[:id])
-  	if Picture.where(params[:cat_id], @cat.id).count > 0
-  		@pictures = Picture.where(params[:cat_id], @cat.id)
+  	if Picture.where(:cat_id => @cat.id).count > 0
+  		@pictures = Picture.where(:cat_id => @cat.id)
   	end
-
-  	100.times { print "*"}
-  	puts @pictures
-  	100.times { print "*"}
   end
 
   def edit

@@ -12,9 +12,10 @@ class PicturesController < ApplicationController
 
   def create
   	@cat = Cat.find(params[:cat_id])
-  	@picture = Picture.new(picture_params)
+  	@picture = @cat.pictures.new(picture_params)
 
   	if @picture.save
+      # @picture.cat_id = @cat.id
       respond_to do |format|
         format.html { redirect_to @cat, notice: 'Picture was successfully added.' }
         format.json { render action: 'show', status: :created, location: @cat }
