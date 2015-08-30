@@ -15,6 +15,7 @@ class CatsController < ApplicationController
   end
 
   def edit
+  	@cat = Cat.find(params[:id])
   end
 
   def create
@@ -22,6 +23,27 @@ class CatsController < ApplicationController
 
     respond_to do |format|
       if @cat.save
+      	if params[:images]
+          # The magic is here ;)
+          params[:images].each { |image|
+            @cat.pictures.create(image: image)
+          }
+        end
+
+        format.html { redirect_to @cat, notice: 'Cat was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @cat }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @cat.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def update
+  	@cat = Cat.find(params[:id])
+
+    respond_to do |format|
+      if @cat.update_attributes(cat_params)
       	if params[:images]
           # The magic is here ;)
           params[:images].each { |image|
