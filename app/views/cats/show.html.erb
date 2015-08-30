@@ -2,12 +2,14 @@
 <p>Find me in app/views/cats/show.html.erb</p>
 
 <% if @pictures %>
+	<!-- make partial for this -->
 	<% @pictures.each do |picture| %>
 		<h2><%= @cat.name %></h2>
 		<%= image_tag picture.image.url(:medium) %>
 		<p><%= @cat.description %></p>
 	<% end %>
 <% else %>
+	<!-- make partial for this -->
 	<h2><%= @cat.name %></h2>
 	<p><%= @cat.description %></p>
 <% end %>
