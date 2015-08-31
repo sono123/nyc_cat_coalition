@@ -43,9 +43,23 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy
+  	@event = Event.find(params[:id])
+
+  	@event.destroy
+    respond_to do |format|
+      format.html { redirect_to events_path }
+      format.json { head :no_content }
+    end
+  end
+
   private
 
   def event_params
   	params.require(:event).permit(:title, :description, :date, :location)
   end
 end
+
+
+
+
