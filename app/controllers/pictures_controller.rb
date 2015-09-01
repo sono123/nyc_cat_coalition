@@ -26,6 +26,17 @@ class PicturesController < ApplicationController
     end
   end
 
+  def destroy
+  	@cat = Cat.find(params[:cat_id])
+  	@picture = Picture.find(params[:id])
+
+  	@picture.destroy
+    respond_to do |format|
+      format.html { redirect_to edit_cat_path(@cat) }
+      format.json { head :no_content }
+    end
+  end
+
   private
 
   def picture_params

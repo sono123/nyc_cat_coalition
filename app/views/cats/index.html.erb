@@ -4,4 +4,8 @@
 <% @cats.each do |cat| %>
 	<p><%= cat.name %></p>
 	<%= image_tag cat.pictures.first.image.url(:thumb) %>
+	<%= link_to "Edit", edit_cat_path(cat) %>
+	<%= link_to "Delete", cat_path(cat), method: :delete, data: { confirm: "Are you sure?" } %>
+	<br>
+	<br>
 <% end %>
