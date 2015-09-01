@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  
+
   get 'main/index' => 'main#index'
   get '/admin' => 'main#admin'
 
   root 'main#index'
 
   resources :events
+  resources :faqs
 
   resources :cats do
     resources :pictures, only: [:show, :new, :create, :edit, :destroy]
