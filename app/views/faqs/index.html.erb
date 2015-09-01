@@ -1,2 +1,12 @@
 <h1>Faqs#index</h1>
 <p>Find me in app/views/faqs/index.html.erb</p>
+
+<% if @faq %>
+	<% @faq.each do |faq| %>
+		<p><%= faq.question %></p>
+		<br>
+		<p><%= faq.answer %></p>
+		<br>
+		<br>
+	<% end %>
+<% end %>

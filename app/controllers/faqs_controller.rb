@@ -1,5 +1,6 @@
 class FaqsController < ApplicationController
   def index
+    @faqs = Faq.all
   end
 
   def new
