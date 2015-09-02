@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'main/index' => 'main#index'
   get '/admin' => 'main#admin'
   get '/about' => 'about#show'
+  get '/about/edit' => 'about#edit'
 
   root 'main#index'
 

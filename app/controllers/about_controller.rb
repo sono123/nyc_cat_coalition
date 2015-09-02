@@ -4,6 +4,7 @@ class AboutController < ApplicationController
   end
 
   def edit
+  	@about = About.first
   end
 
   def update
