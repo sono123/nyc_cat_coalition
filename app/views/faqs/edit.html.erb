@@ -30,4 +30,5 @@
 
 <% end %>
 
-
+<%= link_to "Edit", edit_faq_path(@faq) %>
+<%= link_to "Delete", faq_path(@faq), method: :delete, data: { confirm: "Are you sure?" } %>

@@ -44,6 +44,14 @@ class FaqsController < ApplicationController
   end
 
   def destroy
+    @faq = Faq.find(params[:id])
+
+    if @faq.destroy
+      flash[:success] = "Question was deleted."
+    else
+      flash[:error] = "This question could not be deleted."
+    end
+    redirect_to faqs_path
   end
 
   private

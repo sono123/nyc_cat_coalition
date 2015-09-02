@@ -4,3 +4,5 @@
 <h1><%= @faq.question %></h1>
 <p><%= @faq.answer %></p>
 
+<%= link_to "Edit", edit_faq_path(@faq) %>
+<%= link_to "Delete", faq_path(@faq), method: :delete, data: { confirm: "Are you sure?" } %>
