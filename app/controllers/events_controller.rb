@@ -14,14 +14,14 @@ class EventsController < ApplicationController
   def create
   	@event = Event.new(event_params)
 
-  	if @event.save
-      respond_to do |format|
+    respond_to do |format|
+      if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully added.' }
         format.json { render action: 'show', status: :created, location: @event }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @event.errors, status: :unprocessable_entity }
       end
-    else
-      format.html { render action: 'new' }
-      format.json { render json: @event.errors, status: :unprocessable_entity }
     end
   end
 
