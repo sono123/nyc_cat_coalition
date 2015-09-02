@@ -30,6 +30,17 @@ class FaqsController < ApplicationController
   end
 
   def update
+    @faq = Faq.find(params[:id])
+
+    respond_to do |format|
+      if @faq.update_attributes(faq_params)
+        format.html { redirect_to @faq, notice: 'Faq was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @faq }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @faq.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
