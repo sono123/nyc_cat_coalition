@@ -15,7 +15,7 @@ class AboutsController < ApplicationController
         format.html { redirect_to @about, notice: 'About was successfully created.' }
         format.json { render action: 'show', status: :created, location: @about }
       else
-        format.html { render action: 'new' }
+        format.html { render action: 'edit' }
         format.json { render json: @about.errors, status: :unprocessable_entity }
       end
     end
