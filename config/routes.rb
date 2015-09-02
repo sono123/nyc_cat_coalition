@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :events
   resources :faqs
+  resources :about, only: [:show, :edit, :update]
 
   resources :cats do
     resources :pictures, only: [:show, :new, :create, :edit, :destroy]
