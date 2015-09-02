@@ -22,6 +22,7 @@ class FaqsController < ApplicationController
   end
 
   def show
+    @faq = Faq.find(params[:id])
   end
 
   def edit
