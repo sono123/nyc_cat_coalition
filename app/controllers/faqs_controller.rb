@@ -4,6 +4,7 @@ class FaqsController < ApplicationController
   end
 
   def new
+    @faq = Faq.new
   end
 
   def create
