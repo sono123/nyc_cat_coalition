@@ -17,7 +17,7 @@ class EventsController < ApplicationController
   	if @event.save
       respond_to do |format|
         format.html { redirect_to @event, notice: 'Event was successfully added.' }
-        format.json { render action: 'show', status: :created, location: @cat }
+        format.json { render action: 'show', status: :created, location: @event }
       end
     else
       format.html { render action: 'new' }
