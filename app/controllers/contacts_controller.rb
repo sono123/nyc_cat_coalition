@@ -4,6 +4,7 @@ class ContactsController < ApplicationController
   end
 
   def edit
+  	@contact = Contact.first
   end
 
   def update
