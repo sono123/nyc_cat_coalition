@@ -7,7 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<span><%= link_to "Home", root_path %></span>
+<span><%= link_to "Adopt", cats_path %></span>
+<span><%= link_to "Events", events_path %></span>
+<span><%= link_to "FAQ", faqs_path %></span>
+<span><%= link_to "About", '/about' %></span>
+<span><%= link_to "Contact", '/contact' %></span>
 
+<br>
+<br>
 <% if admin_signed_in? %>
 	<span><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></span>
 <% else %>
