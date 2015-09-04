@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
   get 'main/index' => 'main#index'
   get '/admin' => 'main#admin'
   # get '/about' => 'abouts#show', as: :about ##### why dont these work up here??? ####
