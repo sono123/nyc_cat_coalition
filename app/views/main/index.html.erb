@@ -1,2 +1,24 @@
 <h1>Homepage</h1>
 <p>Find me in app/views/main/index.html.erb</p>
+
+<br>
+<br>
+
+<h1>Some of Our Cats</h1>
+
+<% @cats.each do |cat| %>
+	<h3><%= cat.name %></h3>
+	<%= image_tag cat.pictures.first.image.url(:thumb) %>
+<% end %>
+
+<br>
+<br>
+
+<h1>Upcoming Events</h1>
+
+<% @events.each do |event| %>
+	<h3><%= event.title %></h3>
+	<p><%= event.description %></p>
+	<p><%= event.date %></p>
+	<br>
+<% end %>
