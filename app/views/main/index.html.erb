@@ -7,8 +7,8 @@
 <h1>Some of Our Cats</h1>
 
 <% @cats.each do |cat| %>
-	<h3><%= cat.name %></h3>
-	<%= image_tag cat.pictures.first.image.url(:thumb) %>
+	<%= link_to cat.name, cat_path(cat) %>
+	<%= link_to(image_tag(cat.pictures.first.image.url(:thumb)), cat_path(cat)) %>
 <% end %>
 
 <br>
