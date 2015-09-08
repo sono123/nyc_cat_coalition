@@ -13,9 +13,10 @@
 <span><%= link_to "FAQ", faqs_path %></span>
 <span><%= link_to "About", '/about' %></span>
 <span><%= link_to "Contact", '/contact' %></span>
+<% if admin_signed_in? %>
+<p>Logged in as: <%= current_admin.email %></p>
+<% end %>
 
-<br>
-<br>
 <% if admin_signed_in? %>
 	<span><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></span>
 <% else %>
