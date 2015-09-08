@@ -2,8 +2,8 @@
 <p>Find me in app/views/cats/index.html.erb</p>
 
 <% @cats.each do |cat| %>
-	<p><%= cat.name %></p>
-	<%= image_tag cat.pictures.first.image.url(:thumb) %>
+	<h3><%= link_to cat.name, cat_path(cat) %></h3>
+	<%= link_to( image_tag(cat.pictures.first.image.url(:thumb)), cat_path(cat) ) %>
 	<%= link_to "Edit", edit_cat_path(cat) %>
 	<%= link_to "Delete", cat_path(cat), method: :delete, data: { confirm: "Are you sure?" } %>
 	<br>
