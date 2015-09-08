@@ -4,7 +4,9 @@ class MainController < ApplicationController
   	@events = Event.all.limit(3)
   end
 
-  def admin #admin login page
+  def admin
+  	@about = About.first
+  	@contact = Contact.first
   end
 
   def about
