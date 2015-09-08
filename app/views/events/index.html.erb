@@ -2,7 +2,7 @@
 <p>Find me in app/views/events/index.html.erb</p>
 
 <% @events.each do |event| %>
-	<h2><%= event.title %></h2>
+	<h2><%= link_to event.title, event_path(event) %></h2>
 	<p><%= event.description %></p>
 	<%= link_to "Edit", edit_event_path(event) %>
 	<%= link_to "Delete", event_path(event), method: :delete, data: { confirm: "Are you sure?" } %>
