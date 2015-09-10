@@ -20,3 +20,12 @@
 		<h2><%= event.title %></h2>
 	<% end %>
 <% end %>
+
+
+<h1>Past Events</h1>
+
+<% if @past %>
+	<% @past.each do |event| %>
+		<h2><%= event.title %></h2>
+	<% end %>
+<% end %>

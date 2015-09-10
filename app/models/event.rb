@@ -7,4 +7,8 @@ class Event < ActiveRecord::Base
 	def self.upcoming
 		Event.where('date >= ?', Time.new)
 	end
+
+	def self.past
+		Event.where('date < ?', Time.new)
+	end
 end
