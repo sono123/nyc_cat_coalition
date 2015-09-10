@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
   def index
   	@events = Event.all
-    @upcoming = Event.upcoming
-    @past = Event.past
+    @upcoming = Event.upcoming.sort_by &:date
+    @past = Event.past.sort_by &:date
   end
 
   def new
