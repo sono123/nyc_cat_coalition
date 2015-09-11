@@ -1,1 +1,31 @@
 @import 'bootstrap';
+
+nav.navbar {
+	border-radius: 0;
+	background-color: white;
+	border-bottom: none;
+	height: 100px;
+}
+
+.logo img {
+	width: 150px;
+}
+
+.navbar-brand {
+	padding-top: 5px;
+	padding-left: 40px;
+}
+
+.nav {
+	border-bottom: none;
+}
+
+ul.nav-tabs {
+	margin-top: 48px;
+	float: right;
+}
+
+.nav-tabs  li  a:hover {
+	border-color: #eeeeee;
+	border-radius: 4px;
+}
