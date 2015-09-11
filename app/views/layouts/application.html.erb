@@ -7,12 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<span><%= link_to "Home", root_path %></span>
-<span><%= link_to "Adopt", cats_path %></span>
-<span><%= link_to "Events", events_path %></span>
-<span><%= link_to "FAQ", faqs_path %></span>
-<span><%= link_to "About", '/about' %></span>
-<span><%= link_to "Contact", '/contact' %></span>
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Adopt", cats_path %></li>
+			<li><%= link_to "Events", events_path %></li>
+			<li><%= link_to "FAQ", faqs_path %></li>
+			<li><%= link_to "About", '/about' %></li>
+			<li><%= link_to "Contact", '/contact' %></li>
+		</ul>
+	</div>
 <% if admin_signed_in? %>
 <p>Logged in as: <%= current_admin.email %></p>
 <% end %>
