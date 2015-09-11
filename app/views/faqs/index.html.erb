@@ -1,7 +1,3 @@
-<h1>Faqs#index</h1>
-<p>Find me in app/views/faqs/index.html.erb</p>
-<br>
-
 <% if @faqs.count %>
 	<% @faqs.each do |faq| %>
 		<h3><%= link_to faq.question, faq_path(faq) %></h3>
