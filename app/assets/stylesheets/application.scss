@@ -1,15 +1,50 @@
 @import 'bootstrap';
 
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+.page-body {
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 100px;
+}
+
 .navbar-default {
 	background-color: white;
 	border: none;
 }
 
 .logo_large img {
-	width: 150px;
+	width: 115px;
+	margin-top: -12px;
 }
 
 .logo_small img {
 	width: 60px;
 	margin-top: -15px;
+}
+
+ul.navbar-right {
+	margin-top: 22px;
+}
+
+#navbar {
+	border: none;
+}
+
+.nyccc {
+	width: 100px;
+	margin: auto;
+	float: none;
+}
+
+.footer {
+	height: 100px;
+	width: 100%;
+	background: #930753;
+	color: white;
+	position: absolute;
+	bottom: 0;
 }
