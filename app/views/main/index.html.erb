@@ -1,5 +1,37 @@
 <h1>Some of Our Cats</h1>
 
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+    	<% @cats.each_with_index do |cat, index| %>
+      	<li data-target="#myCarousel" data-slide-to="<%= index %>"></li>
+      <% end %>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+    	<% @cats.each do |cat| %>
+	      <div class="item">
+	        <%= link_to(image_tag(cat.pictures.first.image.url(:medium)), cat_path(cat)) %>
+	      </div>
+      <% end %>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
 <% @cats.each do |cat| %>
 	<h3><%= link_to cat.name, cat_path(cat) %></h3>
 	<%= link_to(image_tag(cat.pictures.first.image.url(:thumb)), cat_path(cat)) %>
