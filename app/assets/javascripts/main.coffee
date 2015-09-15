@@ -5,7 +5,6 @@
 `
 $(document).on('page:change', function() {
 
-	alert("hello");
   $(".item:first").addClass("active");
 
 });
