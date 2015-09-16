@@ -1,4 +1,6 @@
-@import 'bootstrap';
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 
 html {
 	position: relative;
@@ -47,4 +49,13 @@ ul.navbar-right {
 	color: white;
 	position: absolute;
 	bottom: 0;
+}
+
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	margin: auto;
+}
+
+.carousel {
+	background-color: #930753;
 }
