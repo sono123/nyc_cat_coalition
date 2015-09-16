@@ -2,16 +2,10 @@
 <html>
 <head>
   <title>NycCatCoalition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <style>
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
-  </style>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -61,7 +55,6 @@
 			<% end %>
     </div>
   </footer>
-  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
 </html>
