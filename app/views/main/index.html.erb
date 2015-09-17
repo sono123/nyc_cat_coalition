@@ -11,7 +11,7 @@
   <div class="carousel-inner" role="listbox">
   	<% @cats.each do |cat| %>
       <div class="item">
-        <%= link_to(image_tag(cat.pictures.first.image.url(:medium)), cat_path(cat)) %>
+        <%= link_to(image_tag(cat.pictures.first.image.url(:large)), cat_path(cat)) %>
       </div>
     <% end %>
   </div>
