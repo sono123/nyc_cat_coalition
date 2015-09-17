@@ -60,6 +60,15 @@ class CatsController < ApplicationController
     end
   end
 
+  def destroy
+    @cat = Cat.find(params[:id])
+    @cat.destroy
+    respond_to do |format|
+      format.html {redirect_to cats_path}
+      format.json {head :no_content}
+    end
+  end
+
   private
 
   def cat_params
