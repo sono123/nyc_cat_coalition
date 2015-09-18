@@ -67,4 +67,51 @@ ul.navbar-right {
 }
 
 
+.homepage-icons {
+	height: 150px;
+	line-height: 100px;
+}
+
+.homepage-icons i {
+	padding-top: 30px;
+	font-size: 3em;
+	vertical-align: middle;
+}
+
+.homepage-icons h3 {
+	margin-top: 5px;
+}
+
+.icon-row {
+}
+
+.icon-links {
+	color: #333;
+}
+
+.icon-container {
+	height: auto;
+}
+
+
+
+
+@media (max-width : 768px) {
+	body {
+		
+	}
+
+	.space-div {
+		clear: both;
+	}
+}
+
+
+
+
+
+
+
+
+
 

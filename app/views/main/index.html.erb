@@ -27,17 +27,40 @@
   </a>
 </div>
 
-<h1>Some of Our Cats</h1>
+<div class="container-fluid">
+	<div class="row icon-row">
 
-<% @cats.each do |cat| %>
-	<h3><%= link_to cat.name, cat_path(cat) %></h3>
-	<%= link_to(image_tag(cat.pictures.first.image.url(:thumb)), cat_path(cat)) %>
-<% end %>
+		<a href="/cats" class="icon-links">
+			<div class="col-lg-4 col-md-4 col-sm-4 text-center homepage-icons">
+				<i class="fa fa-paw"></i>
+				<h3>Adopt</h3>
+			</div>
+		</a>
 
-<h1>Upcoming Events</h1>
+		<a href="/events" class="icon-links">
+			<div class="col-lg-4 col-md-4 col-sm-4 text-center homepage-icons">
+				<i class="fa fa-calendar"></i>
+				<h3>Events</h3>
+			</div>
+		</a>
 
-<% @upcoming.each do |event| %>
-	<h3><%= link_to event.title, event_path(event) %></h3>
-	<p><%= event.description %></p>
-	<p><%= event.date %></p>
-<% end %>
+		<a href="/contact" class="icon-links">
+			<div class="col-lg-4 col-md-4 col-sm-4 text-center homepage-icons">
+				<i class="fa fa-heart"></i>
+				<h3>Donate</h3>
+			</div>
+		</a>
+
+	</div>
+</div>
+
+
+<div class="space-div"></div>
+
+
+
+
+
+
+
+

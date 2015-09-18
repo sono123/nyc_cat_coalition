@@ -7,54 +7,53 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header row">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <%= link_to(image_tag("nyccc-logo"), root_path, class: "navbar-brand logo_large hidden-xs") %>
-		      <%= link_to(image_tag("nyccc-logo"), root_path, class: "navbar-brand logo_small visible-xs") %>
-		      <%= link_to( "NYCCC", root_path, class: "navbar-brand visible-xs nyccc") %>
-		  </div>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header row">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <%= link_to(image_tag("nyccc-logo"), root_path, class: "navbar-brand logo_large hidden-xs") %>
+			      <%= link_to(image_tag("nyccc-logo"), root_path, class: "navbar-brand logo_small visible-xs") %>
+			      <%= link_to( "NYCCC", root_path, class: "navbar-brand visible-xs nyccc") %>
+			  </div>
 
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><%= link_to "Adopt", cats_path %></li>
-					<li><%= link_to "Events", events_path %></li>
-					<li><%= link_to "FAQ", faqs_path %></li>
-					<li><%= link_to "About", '/about' %></li>
-					<li><%= link_to "Contact", '/contact' %></li>
-				</ul>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><%= link_to "Adopt", cats_path %></li>
+						<li><%= link_to "Events", events_path %></li>
+						<li><%= link_to "FAQ", faqs_path %></li>
+						<li><%= link_to "About", '/about' %></li>
+						<li><%= link_to "Contact", '/contact' %></li>
+					</ul>
+				</div>
+
 			</div>
+		</nav>
 
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+
+		<div class="container-fluid page-body">
+		<%= yield %>
 		</div>
-	</nav>
 
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+		<footer class="footer">
+	    <div class="container">
+				<% if admin_signed_in? %>
+					<p>Logged in as: <%= current_admin.email %></p>
+					<%= link_to "Sign Out", destroy_admin_session_path, method: :delete %>
+				<% else %>
+					<%= link_to "Sign In", new_admin_session_path %>
+					<%= link_to "Sign Up", new_admin_registration_path %>
+				<% end %>
+	    </div>
+	  </footer>
 
-	<div class="container-fluid page-body">
-	<%= yield %>
-	</div>
-
-
-	<footer class="footer">
-    <div class="container">
-			<% if admin_signed_in? %>
-				<p>Logged in as: <%= current_admin.email %></p>
-				<%= link_to "Sign Out", destroy_admin_session_path, method: :delete %>
-			<% else %>
-				<%= link_to "Sign In", new_admin_session_path %>
-				<%= link_to "Sign Up", new_admin_registration_path %>
-			<% end %>
-    </div>
-  </footer>
-
-</body>
+	</body>
 </html>
