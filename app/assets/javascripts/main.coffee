@@ -4,7 +4,8 @@
 
 `
 $(document).on('page:change', function() {
-
+	
+	$(".item").removeClass("active");
   $(".item:first").addClass("active");
 
 });
