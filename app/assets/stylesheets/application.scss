@@ -33,7 +33,21 @@ body {
 }
 
 ul.navbar-right {
-	margin-top: 22px;
+	margin-top: 29px;
+}
+
+ul.navbar-right a {
+	font-family: 'Roboto Slab';
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #930753;
+}
+
+.navbar {
+	margin-bottom: 13px;
 }
 
 #navbar {
@@ -106,8 +120,12 @@ ul.navbar-right {
 .homepage-text-container {
 	margin-top: 50px;
 	margin-bottom: 50px;
+	line-height: 2;
 }
 
+.homepage-text-container p {
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+}
 
 
 @media (max-width : 768px) {
