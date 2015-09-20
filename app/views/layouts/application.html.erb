@@ -45,14 +45,13 @@
 		</div>
 
 		<footer class="footer">
-	    <div class="container">
-				<% if admin_signed_in? %>
-					<p>Logged in as: <%= current_admin.email %></p>
-					<%= link_to "Sign Out", destroy_admin_session_path, method: :delete %>
-				<% else %>
-					<%= link_to "Sign In", new_admin_session_path %>
-					<%= link_to "Sign Up", new_admin_registration_path %>
-				<% end %>
+	    <div id="footer-info" class="container">
+				
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 text-center">Petsmart, Port Chester, NY 10573</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 text-center">nycatcoal@yahoo.com</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 text-center">Phone: 1-718-671-1695</div>
+				</div>
 	    </div>
 	  </footer>
 
