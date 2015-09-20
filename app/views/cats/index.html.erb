@@ -1,8 +1,17 @@
-<% @cats.each do |cat| %>
-	<h3><%= link_to cat.name, cat_path(cat) %></h3>
-	<%= link_to( image_tag(cat.pictures.first.image.url(:thumb)), cat_path(cat) ) %>
-	<%= link_to "Edit", edit_cat_path(cat) %>
-	<%= link_to "Delete", cat_path(cat), method: :delete, data: { confirm: "Are you sure?" } %>
-	<br>
-	<br>
-<% end %>
+
+<div class="row">
+
+	<% @cats.each do |cat| %>
+
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-11">
+			<h3><%= link_to cat.name, cat_path(cat) %></h3>
+			<%= link_to( image_tag(cat.pictures.first.image.url(:medium), class: "img-rounded"), cat_path(cat) ) %>
+			<%= link_to "Edit", edit_cat_path(cat) %>
+			<%= link_to "Delete", cat_path(cat), method: :delete, data: { confirm: "Are you sure?" } %>
+		</div>
+
+
+	<% end %>
+	
+
+</div>

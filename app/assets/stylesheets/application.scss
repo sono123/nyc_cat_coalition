@@ -67,7 +67,7 @@ ul.navbar-right a {
 }
 
 .footer {
-	height: 100px;
+	min-height: 100px;
 	width: 100%;
 	background: #930753;
 	color: white;
@@ -77,7 +77,7 @@ ul.navbar-right a {
 
 #footer-info {
 	font-family: 'Roboto Slab';
-	height: 100px;
+	
 	line-height: 100px;
 }
 
@@ -145,6 +145,11 @@ ul.navbar-right a {
 
 	.devise {
 		padding: 0;
+	}
+
+	#footer-info {
+		line-height: 25px;
+		margin-top: 10px;
 	}
 }
 
