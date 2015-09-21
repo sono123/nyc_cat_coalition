@@ -1,21 +1,21 @@
 
-<div class="row">
 
 	<% @cats.each do |cat| %>
 
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 cats-divs">
+		<div class="cat-index-info">
+			<h1 class="cat-index-name"><%= link_to cat.name, cat_path(cat) %></h1>
+			<p class="cat-index-age"><%= cat.age %> Years Old</p>
+		</div>
 
 
-			<%= link_to( image_tag(cat.pictures.first.image.url(:large), class: "cats-index-images"), cat_path(cat) ) %>
-			<h3 class="cat-name-h1"><%= link_to cat.name, cat_path(cat) %></h3>
-			<p class="cat-name-p"><%= cat.description %></p>
-			<p class="cat-name-p"><%= cat.age %> Years old.</p>
+		<%= link_to( image_tag(cat.pictures.first.image.url(:large), class: "cats-index-images"), cat_path(cat) ) %>
 
 
+		<div class="cat-index-description-div">
+			<p class="cat-index-description"><%= cat.description %></p>
 		</div>
 
 
 	<% end %>
 	
 
-</div>

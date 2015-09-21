@@ -136,6 +136,59 @@ ul.navbar-right a {
 
 /*  CATS INDEX */
 
+.cat-index-info {
+	max-width: 900px;
+	width: 100%;
+	background-color: #930753;
+	display: block;
+	margin: auto;
+	margin-bottom: 0;
+	color: white;
+}
+
+.cat-index-name {
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+	padding-top: 12px;
+	color: white;
+	text-align: center;
+}
+
+.cat-index-name a {
+	color: white;
+}
+
+.cat-index-age {
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+	text-align: center;
+	color: white;
+	padding-bottom: 10px;
+	margin-bottom: 5px;
+}
+
+.cat-index-description-div {
+	max-width: 900px;
+	width: 100%;
+	background-color: #930753;
+	display: block;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 40px;
+	color: white;
+}
+
+.cat-index-description {
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+	color: white;
+	padding: 15px;
+}
+
+.cats-index-images {
+	max-width: 900px;
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
 .cats-divs {
 	background-color: #930753;
 	padding-right: 0;
@@ -147,10 +200,6 @@ ul.navbar-right a {
 
 .cats-divs a {
 	color: white;
-}
-
-.cats-index-images {
-	width: 100%;
 }
 
 .cat-name-h1 {
