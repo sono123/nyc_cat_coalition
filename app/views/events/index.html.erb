@@ -1,16 +1,20 @@
-<h1>Upcoming Events</h1>
+<div class="event-headers">
+	<h1>Upcoming Events</h1>
+</div>
 
 <% if @upcoming %>
 	<% @upcoming.each do |event| %>
-		<h2><%= link_to event.title, event_path(event) %></h2>
-		<p><%= event.description %></p>
-		<%= link_to "Edit", edit_event_path(event) %>
-		<%= link_to "Delete", event_path(event), method: :delete, data: { confirm: "Are you sure?" } %>
+		<a href="<%= event_path(event) %>" class="event-link-div">
+			<div class="event-divs">
+				<h2 class="event-title"><%= event.title %></h2>
+			</div>
+		</a>
 	<% end %>
 <% end %>
 
-
-<h1>Past Events</h1>
+<div class="event-headers">
+	<h1>Past Events</h1>
+</div>
 
 <% if @past %>
 	<% @past.each do |event| %>

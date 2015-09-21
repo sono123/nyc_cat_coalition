@@ -230,6 +230,50 @@ img.cat-show-images {
 }
 
 
+/* EVENTS INDEX */
+
+.event-headers {
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+	max-width: 900px;
+	width: 100%;
+	display: block;
+	margin: auto;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.event-headers h1 {
+	font-weight: 700;
+	font-size: 2.2em;
+}
+
+.event-divs:hover {
+	background-color: #84064a;
+}
+
+.event-divs {
+	max-width: 900px;
+	width: 100%;
+	background-color: #930753;
+	display: block;
+	margin: auto;
+	color: white;
+}
+
+.event-link-div:hover {
+	text-decoration: none;
+}
+
+.event-link-div {
+	color: white;
+}
+
+.event-title {
+	padding: 10px;
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+	font-size: 1.5em;
+}
+
 
 @media (max-width : 768px) {
 	body {
