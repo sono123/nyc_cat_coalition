@@ -1,12 +1,22 @@
-<h1><%= @cat.name %></h1>
-<p><%= @cat.description %></p>
+<div class="cat-show-info">
+	<h1 class="cat-show-name"><%= @cat.name %></h1>
+	<p class="cat-show-age"><%= @cat.age %> Years Old</p>
+</div>
 
 <% if @pictures %>
 	<!-- make partial for this -->
-	<% @pictures.each do |picture| %>
-		<%= image_tag picture.image.url(:medium) %>
-	<% end %>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<% @pictures.each do |picture| %>
+				<%= image_tag picture.image.url(:large), class: "cat-show-images" %>
+			<% end %>
+		</div>
+	</div>
 <% end %>
+
+<div class="cat-show-info">
+	<p class="cat-show-description"><%= @cat.description %></p>
+</div>
 
 <p class=""><%= link_to "Edit", edit_cat_path(@cat) %></p>
 <p class=""><%= link_to "Delete", cat_path(@cat), method: :delete, data: { confirm: "Are you sure?" } %></p>
