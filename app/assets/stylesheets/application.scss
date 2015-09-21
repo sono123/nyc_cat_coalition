@@ -134,6 +134,40 @@ ul.navbar-right a {
 }
 
 
+/*  CATS INDEX */
+
+.cats-divs {
+	background-color: #930753;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 5px;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.cats-divs a {
+	color: white;
+}
+
+.cats-index-images {
+	width: 100%;
+}
+
+.cat-name-h1 {
+	padding-left: 10px;
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+	margin-top: 12px;
+}
+
+.cat-name-p {
+	padding-left: 10px;
+	color: white;
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+}
+
+
+
+
 @media (max-width : 768px) {
 	body {
 		

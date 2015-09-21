@@ -7,3 +7,6 @@
 		<%= image_tag picture.image.url(:medium) %>
 	<% end %>
 <% end %>
+
+<p class=""><%= link_to "Edit", edit_cat_path(@cat) %></p>
+<p class=""><%= link_to "Delete", cat_path(@cat), method: :delete, data: { confirm: "Are you sure?" } %></p>
