@@ -284,6 +284,68 @@ img.cat-show-images {
 }
 
 
+/* EVENT SHOW */
+
+.event-title-div {
+	max-width: 900px;
+	width: 100%;
+	background-color: #930753;
+	display: block;
+	margin: auto;
+	color: white;
+}
+
+.event-title-h2 {
+	padding: 10px;
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.event-description {
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+}
+
+.event-p-div {
+	max-width: 900px;
+	width: 100%;
+	display: block;
+	margin: auto;
+	padding-right: 10px;
+	padding-left: 10px;
+	line-height: 2;
+}
+
+.event-date-map-div {
+	max-width: 900px;
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+.event-date-map-div i {
+	font-size: 3em;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+.event-date-map-div p {
+	font-family: 'Roboto Slab', 'helvetica', sans-serif;
+	font-size: 1.3em;
+}
+
+.google-maps-link:hover {
+	text-decoration: none;
+}
+
+.google-maps-link {
+	color: #333333;
+}
+
+
+
+
+
 
 
 @media (max-width : 768px) {
